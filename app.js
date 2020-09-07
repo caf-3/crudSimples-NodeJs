@@ -48,7 +48,7 @@ mongoose.connect(db.mongoURI, {
 }).then(function () {
     console.log('connectado ao mongo...');
 }).catch((err) => {
-    console.log('Houve um erro ao conectar-se ao mongo ');
+    console.log('Houve um erro ao conectar-se ao mongo '+err);
 });
 // -- BODYPARSER
 app.use(bodyParser.urlencoded({ extended: true }));
