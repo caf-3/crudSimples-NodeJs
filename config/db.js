@@ -1,5 +1,5 @@
 if(process.env.NODE_ENV == 'production'){
-    module.exports = {mongoURI : 'mongodb+srv://blogapp:matsolo@blogapp.qfsic.mongodb.net/crud?retryWrites=true&w=majority'}
+    module.exports = {mongoURI : 'yourAtlasURI'}
 }else{
     module.exports = {mongoURI: 'mongodb://localhost/js-community'}
 }
