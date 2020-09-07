@@ -4,7 +4,7 @@ Desafio da semana na comunidade JS Maputo Community
 ## Front-end
 [MaterializeCSS](https://materializecss.com)
 ## Back-end
-[NodeJs]((https://nodejs.org)
+[NodeJs](https://nodejs.org)
 ## Base de dados 
 [MongoDB](http://mongodb.com)
 ## Rodando
