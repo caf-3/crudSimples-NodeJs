@@ -1,0 +1,36 @@
+
+.alata{
+    font-family: 'Alata', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, a, li{
+    font-family: 'Alata', sans-serif !important;
+}
+
+.btn{
+    text-align: left !important;
+}
+.input-field input:focus, .input-field textarea:focus{
+    border-bottom: 1px solid  #4CAF50 !important;
+    box-shadow: 0 1px 0 0 #4CAF50 !important;
+    color: white;
+    font-family: 'Raleway Extralight';
+}
+
+.input-field input:focus + label, .input-field textarea:focus +label{
+    color:  #4CAF50 !important;
+  }
+  .input-field input, .input-field textarea{
+    color: #4CAF50 !important;
+}
+.material-tooltip , .backdrop{
+	background-color: #2b9cf2;
+}
+.sucesso{
+    background-color: #4CAF50 !important;
+}
+.error{
+    background-color: #c62828;
+}
+.modal.deletar{
+    height: 50vh !important;
+}

@@ -1,0 +1,60 @@
+<h3 class="green-text">JS MAPUTO COMMUNITY MEMBERS</h3>
+<a href="/novo" class="green btn waves-effect waves-purple">Adicionar novo membro</a>
+{{#if membros}}
+<table class="green-text highlight responsive-table">
+    <thead>
+        <tr>
+            <td>In</td>
+            <td>Nome</td>
+            <td>gitHub</td>
+            <td colspan="2">Ação</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each membros}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{nome}}</td>
+            <td><i class="fa fa-github small "></i><a href="https://github.com/{{github}}"
+                    target="_blank">{{github}}</a></td>
+            <td><a href="#editar{{github}}" class="btn-floating tooltipped modal-trigger" data-position="top"
+                    data-tooltip="editar"><i class="material-icons">edit</i></a></td>
+            <td><a href="#deletar{{_id}}" class="btn-floating tooltipped red modal-trigger" data-position="top"
+                    data-tooltip="deletar"><i class="material-icons">delete</i></a></td>
+        </tr>
+        <div class="modal" id="editar{{github}}">
+            <div class="modal-content">
+                <h4> Aviso</h4>
+                <p>Deseja editar {{nome}} ?</p>
+                <div class="modal-footer">
+                    <a href="/editar/{{github}}" class="alata btn red">Sim quero</a>
+                    <a class="btn modal-action modal-close ">Não quero</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal deletar" id="deletar{{_id}}">
+            <div class="modal-content">
+                <h4> Aviso</h4>
+                <p>Deseja deletar {{nome}} ?</p>
+                <div class="modal-footer">
+                    <form action="/deletar" method="POST">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <div class="container">
+                            <div class="input-field">
+                            <input type="text" name="chave" placeholder="chave">
+                        </div>
+                        </div>
+                        <button type="submit" class="alata btn red">Sim quero</button>
+                        <a class="btn modal-action modal-close ">Não quero</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <h4 class="red-text">Houve um erro ao listar membros</h4>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+    <h4 class="red-text">Sem nenhum membro registrado</h4>
+{{/if}}

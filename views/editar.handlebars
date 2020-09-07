@@ -1,0 +1,27 @@
+<h3 class="green-text center-align section">Novo Membro</h3>
+{{#if erros}}
+<section class="container">
+    <div class="red section white-text center-align">
+        {{#each erros}}
+        <p>{{texto}}</p>
+        {{else}}
+        {{/each}}
+    </div>
+</section>
+{{/if}}
+<div class="container">
+<a href="/" class="green btn waves-effect waves-purple">Lista de membros</a>
+    <form autocomplete="off" action="/editar" method="POST">
+        <div class="input-field alata">
+            <input type="text" name="nome" id="nome" placeholder="Nome do membro" value="{{membro.nome}}">
+        </div>
+        <div class="input-field alata">
+            <input type="text" name="github" id="github" placeholder="Nome do usuario do gitHub" value="{{membro.github}}">
+        </div>
+        <div class="input-field alata">
+            <input type="text" name="chave" id="chave" placeholder="Chave de acesso">
+        </div>
+        <input type="hidden" name="id" value="{{membro._id}}">
+        <input type="submit" class="btn green" value="Cadastrar membro">
+    </form>
+</div>

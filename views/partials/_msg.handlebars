@@ -1,0 +1,21 @@
+{{#if success}}
+    <script>
+        window.onload = function(){
+            M.toast({
+                html: '{{success}}',
+                classes: 'sucesso'
+            })
+        }
+    </script>
+{{/if}}
+
+{{#if error}}
+    <script>
+        window.onload = function(){
+            M.toast({
+                html: '{{error}}',
+                classes: 'error'
+            })
+        }
+    </script>
+{{/if}}

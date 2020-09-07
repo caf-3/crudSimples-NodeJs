@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>{{metaTags.title}}</title>
+    <meta name="description" content="{{metaTags.description}}">
+    <!-- FACEBOOK SEO -->
+    <meta property="og:url" content="https://caf3.co" />
+    <meta property="og:type" content="personal" />
+    <meta property="og:title" content="{{metaTags.title}}" />
+    <meta property="og:description" content="{{metaTags.description}}" />
+    <meta property="og:image" content="/img/caf3.png" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#6a00ff">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#6a00ff">
+    <!-- iOS Safari -->
+    <meta name="Apple-mobile-web-app-status-bar-style" content="#6a00ff">
+    <link rel="stylesheet" "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!--ICONS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.png">
+    </head>
+    <body>
+        {{>_msg}}
+        <div class="container">
+            {{{body}}}
+        </div>
+        <!--JS AND JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/custom.js"></script>
+    </body>
+</html>
