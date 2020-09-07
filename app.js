@@ -164,7 +164,7 @@ app.post('/deletar', function(req, res){
     Membro.findOne({_id: id}).then(function(membro){
         if(membro){
             if(chave !== membro.chave){
-                req.flash('error', 'Voce não está autorizado deletar membro');
+                req.flash('error', 'Voce não está autorizado a deletar membro');
                 res.redirect('/');
             }else{
                 Membro.deleteOne({_id: id}).then(function(){
